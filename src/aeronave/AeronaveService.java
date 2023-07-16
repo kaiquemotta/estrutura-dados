@@ -1,7 +1,6 @@
 package aeronave;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
@@ -12,7 +11,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Function;
 import java.util.function.Predicate;
 
-public class CadastroAeronave {
+public class AeronaveService {
 
 	private final EntradaDeDados leitor = new EntradaDeDados();
 	private final String DIGITE_OPCAO_DESEJADA = "Digite a opção desejada: ";
@@ -245,7 +244,4 @@ public class CadastroAeronave {
 		}
 	}
 
-	private List<Aeronave> removerDuplicados(List<Aeronave> lista) {
-		return new ArrayList<>(new HashSet<>(lista));
-	}
 }
