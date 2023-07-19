@@ -17,7 +17,7 @@ public class AeronaveService {
 	private final String DIGITE_OPCAO_DESEJADA = "Digite a opção desejada: ";
 	private final String OPCAO_SAIR = "x";
 	private final String OPCAO_CADASTRAR_EM_LOTE = "1";
-	private final String OPCAO_LISTAR_FUNCIONARIOS = "2";
+	private final String OPCAO_LISTAR_AERONAVE = "2";
 	private final String OPCAO_BUSCA_POR_CPF_CNPJ = "3";
 	private final String OPCAO_BUSCA_POR_NOME_PROPRIETARIO = "4";
 	private final String ORDERNAR = "5";
@@ -93,7 +93,7 @@ public class AeronaveService {
 			pularLinha(2);
 
 			break;
-		case OPCAO_LISTAR_FUNCIONARIOS:
+		case OPCAO_LISTAR_AERONAVE:
 			listarAeronaves();
 			pularLinha(2);
 			break;
@@ -206,7 +206,7 @@ public class AeronaveService {
 			for (Aeronave aeronave : aeronaves) {
 				sb.append("\t").append(aeronave).append(",\n");
 			}
-			sb.setLength(sb.length() - 2); // Remover a vírgula extra após o último funcionário
+			sb.setLength(sb.length() - 2); 
 			sb.append("\n]");
 		}
 
@@ -224,7 +224,7 @@ public class AeronaveService {
 			for (Aeronave aeronave : list) {
 				sb.append("\t").append(aeronave).append(",\n");
 			}
-			sb.setLength(sb.length() - 2); // Remover a vírgula extra após o último funcionário
+			sb.setLength(sb.length() - 2); 
 			sb.append("\n]");
 		}
 
@@ -233,9 +233,6 @@ public class AeronaveService {
 
 	private void carregarAeronavesEmLote() {
 		aeronaves = new CarregarDadosExternos().listAeronaves();
-
-		// this.inserirFuncionario(removerDuplicados(novosFuncionarios));
-
 	}
 
 	public void pularLinha(int numeroDeLinhas) {
